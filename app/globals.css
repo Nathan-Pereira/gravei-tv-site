@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f7f7f7;
+  --color-foreground: #0a0a0a;
+  --color-muted: #525252;
+  --color-subtle: #737373;
+  --color-border: #e5e5e5;
+  --color-card: #ffffff;
+  --color-elevated: #ffffff;
+
+  --color-neon: #39ff14;
+  --color-neon-soft: #2bd80f;
+  --color-neon-glow: rgba(57, 255, 20, 0.45);
+  --color-accent: #16a34a;
+  --color-accent-soft: #15803d;
+
+  --color-dark: #0a0a0a;
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-anton), Impact, sans-serif;
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-pulse-glow: pulse-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--color-neon-glow); }
+  50% { box-shadow: 0 0 32px 8px var(--color-neon-glow); }
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-neon);
+  color: var(--color-foreground);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+  line-height: 0.92;
+}
+
+.text-neon {
+  color: var(--color-neon);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-neon {
+  background-color: var(--color-neon);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.glow-neon {
+  text-shadow: 0 0 8px var(--color-neon-glow);
+}
+
+.gradient-radial {
+  background: radial-gradient(circle at center, rgba(57, 255, 20, 0.22) 0%, transparent 60%);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.grid-bg-dark {
+  background-image:
+    linear-gradient(rgba(57, 255, 20, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 20, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.cursor-magnetic {
+  transition: transform 0.18s cubic-bezier(.2,.8,.2,1);
+}
+
+.cursor-magnetic:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-neon {
+  background: var(--color-foreground);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.btn-neon:hover {
+  background: var(--color-neon);
+  color: var(--color-foreground);
+  box-shadow: 0 0 0 3px rgba(57,255,20,.18), 0 14px 36px -8px var(--color-neon-glow);
+  transform: translateY(-2px);
+}
+
+.btn-neon-solid {
+  background: var(--color-neon);
+  color: var(--color-foreground);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.btn-neon-solid:hover {
+  box-shadow: 0 0 0 3px rgba(57,255,20,.22), 0 14px 36px -8px var(--color-neon-glow);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: var(--color-card);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  font-weight: 700;
+  transition: border-color .2s, background .2s, transform .18s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-foreground);
+  background: var(--color-card);
+  transform: translateY(-2px);
+}
+
+.card-elevated {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+
+.card-elevated:hover {
+  border-color: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.section-dark {
+  background: var(--color-dark);
+  color: #fff;
+}
+
+.section-dark * {
+  border-color: rgba(255, 255, 255, 0.08);
+}
