@@ -3,13 +3,12 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap } from "lucide-react";
+import Link from "next/link";
 import { scrollToId, cn } from "@/lib/utils";
 
 const NAV = [
   { href: "como-funciona", label: "Como funciona" },
-  { href: "quadras", label: "Quadras" },
   { href: "para-quadras", label: "Pra quadras" },
-  { href: "indicar", label: "Indicar quadra" },
   { href: "faq", label: "FAQ" },
 ];
 
@@ -65,7 +64,13 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+            <Link
+              href="/indicar"
+              className="text-sm text-neutral-700 hover:text-foreground transition-colors font-medium"
+            >
+              Indicar quadra
+            </Link>
             <button
               onClick={() => go("para-quadras")}
               className="btn-neon-solid rounded-full px-5 py-2 text-sm cursor-magnetic"
@@ -103,6 +108,13 @@ export default function Header() {
                   {item.label}
                 </button>
               ))}
+              <Link
+                href="/indicar"
+                onClick={() => setOpen(false)}
+                className="text-left py-3 px-3 rounded-lg text-base font-medium hover:bg-neutral-100"
+              >
+                Indicar quadra
+              </Link>
               <button
                 onClick={() => go("para-quadras")}
                 className="btn-neon-solid rounded-full px-5 py-3 mt-2"

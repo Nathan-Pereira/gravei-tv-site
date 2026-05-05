@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Building2, Gift, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { scrollToId } from "@/lib/utils";
 
 export default function FinalCTA() {
@@ -47,9 +48,9 @@ export default function FinalCTA() {
           transition={{ delay: 0.1 }}
           className="mt-6 font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl uppercase"
         >
-          Cravou?
+          Cravei?
           <br />
-          Já era. Grava.
+          Gravei!
         </motion.h2>
 
         <motion.p
@@ -90,8 +91,8 @@ export default function FinalCTA() {
             </span>
           </button>
 
-          <button
-            onClick={() => scrollToId("indicar")}
+          <Link
+            href="/indicar"
             className="cursor-magnetic group flex flex-col items-start gap-2 bg-foreground text-white rounded-3xl p-6 sm:p-8 hover:bg-neutral-900 transition-colors text-left"
           >
             <span className="grid place-items-center size-12 rounded-xl bg-neon text-foreground">
@@ -101,14 +102,14 @@ export default function FinalCTA() {
               Sou jogador
             </span>
             <span className="text-white/70 text-sm">
-              Indica sua quadra preferida e ganha 20 vídeos HD grátis quando
-              fechar instalação.
+              Indica sua quadra preferida e ganha R$100 quando fechar
+              instalação.
             </span>
             <span className="mt-3 inline-flex items-center gap-1.5 text-neon font-bold text-sm">
               Indicar quadra
               <ArrowRight size={16} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />
             </span>
-          </button>
+          </Link>
         </motion.div>
 
         <motion.p

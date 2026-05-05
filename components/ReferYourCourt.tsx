@@ -59,14 +59,12 @@ export default function ReferYourCourt() {
             <h2 className="font-display text-5xl sm:text-6xl md:text-7xl uppercase mt-4 text-foreground">
               Indica.
               <br />
-              <span className="text-accent">Ganha 20.</span>
+              <span className="text-accent">Ganha R$100.</span>
             </h2>
             <p className="mt-6 text-lg text-neutral-700 leading-relaxed">
               Sua quadra do coração ainda não tem Gravei? Conta pra gente.
               Quando a indicação virar instalação, você ganha{" "}
-              <span className="text-foreground font-bold">
-                20 vídeos HD grátis
-              </span>{" "}
+              <span className="text-foreground font-bold">R$100</span>{" "}
               pra usar como quiser.
             </p>
 
@@ -80,15 +78,14 @@ export default function ReferYourCourt() {
                   <Gift size={28} strokeWidth={2.2} />
                 </div>
                 <div className="mt-6 font-display text-7xl text-neon">
-                  20
+                  R$100
                 </div>
                 <div className="font-bold text-xl mt-1">
-                  vídeos HD grátis
+                  em dinheiro, no seu bolso
                 </div>
                 <p className="mt-3 text-white/70 leading-relaxed">
-                  Quando você indica e a gente fecha a instalação, libera os
-                  20 vídeos na sua conta. Sem letra miúda, sem prazo de
-                  validade.
+                  Quando você indica e a gente fecha a instalação, você recebe
+                  R$100. Sem letra miúda, sem prazo de validade.
                 </p>
 
                 <ul className="mt-6 space-y-2 text-sm text-white/80">
@@ -130,7 +127,8 @@ export default function ReferYourCourt() {
                   </h3>
                   <p className="mt-3 text-neutral-700 max-w-sm mx-auto leading-relaxed">
                     A gente já vai entrar em contato com a quadra. Quando
-                    fechar instalação, seus <span className="font-bold text-foreground">20 vídeos HD</span> aparecem na sua conta.
+                    fechar instalação, você recebe{" "}
+                    <span className="font-bold text-foreground">R$100</span>.
                   </p>
                   <button
                     onClick={() => {

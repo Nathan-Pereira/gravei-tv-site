@@ -6,7 +6,7 @@ const FOOTER_LINKS = {
   Jogadores: [
     { label: "Como funciona", href: "#como-funciona" },
     { label: "Recursos", href: "#recursos" },
-    { label: "Indicar quadra", href: "#indicar" },
+    { label: "Indicar quadra", href: "/indicar" },
     { label: "FAQ", href: "#faq" },
   ],
   Quadras: [
